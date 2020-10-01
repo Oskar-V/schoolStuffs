@@ -1,0 +1,12 @@
+.vs/
+Debug/
+
+*.tlog
+*.lastbuildstate
+*.exe
+
+
+IAG0090_Voorel/IAG0090_Voorel.sln
+IAG0090_Voorel/IAG0090_Voorel.vcxproj
+IAG0090_Voorel/IAG0090_Voorel.vcxproj.filters
+IAG0090_Voorel/IAG0090_Voorel.vcxproj.user
