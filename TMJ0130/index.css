@@ -1,0 +1,146 @@
+:root {
+	--gap-size: 15px;
+	--white-color: #d0ddd7;
+	--black-color: #121212;
+}
+body,
+html {
+	margin: 0;
+	padding: calc(var(--gap-size) / 2);
+	height: 100%;
+	width: 100%;
+	background-color: var(--black-color);
+	color: var(--white-color);
+	overflow-x: hidden;
+	box-sizing: border-box;
+}
+* {
+	box-sizing: border-box;
+	word-wrap: break-word !important;
+	white-space: normal;
+}
+.container {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	height: 100%;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	gap: var(--gap-size) var(--gap-size);
+	grid-template-areas:
+		'Key-Partners Key-Activities Value-Propositions Customer-Relationships Customer-Segments'
+		'Key-Partners Key-Resources Value-Propositions Channels Customer-Segments'
+		'Tmp Tmp Tmp Tmp Tmp';
+}
+.container div {
+	border: 1px solid var(--white-color);
+	padding: 10px 20px 0;
+}
+.container div .info, .container div {
+	background-size: contain;
+	/* background-position: center; */
+	background-repeat: no-repeat;
+}
+.Key-Partners {
+	grid-area: Key-Partners;
+}
+.Key-Partners .info {
+	background-image: url(/media/partner.png);
+	background-position: center bottom;
+}
+.Key-Activities {
+	grid-area: Key-Activities;
+	/* background-image: url(/media/Key-Activities.png); */
+}
+.Key-Resources {
+	grid-area: Key-Resources;
+}
+.Value-Propositions {
+	grid-area: Value-Propositions;
+	
+}
+.Value-Propositions .info {
+	background-image: url(/media/value_proposition.png);
+	background-position: center bottom;
+}
+.Customer-Relationships {
+	grid-area: Customer-Relationships;
+}
+.Channels {
+	grid-area: Channels;
+}
+.Customer-Segments {
+	grid-area: Customer-Segments;
+}
+.Customer-Segments .info {
+	background-image: url(media/customer-segments.png);
+	background-position: center bottom;
+}
+.Cost-Structure {
+	background-image: url(media/costs.png);
+	background-position: right center;
+	grid-area: Cost-Structure;
+}
+.Revenue-Streams {
+	background-image: url(media/revenue-streams.png);
+	background-position: right center;
+	grid-area: Revenue-Streams;
+}
+.Tmp {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr;
+	gap: 0px var(--gap-size);
+	grid-template-areas: 'Cost-Structure Revenue-Streams';
+	grid-area: Tmp;
+	padding: 0 !important;
+	border: 0 !important;
+}
+h1 {
+	padding: 0;
+	margin: 0;
+}
+.section {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto 1fr;
+	gap: 0px 0px;
+	grid-template-areas:
+		'Header'
+		'.';
+}
+.Header {
+	display: grid;
+	grid-template-columns: 1fr 20%;
+	grid-template-rows: 1fr;
+	gap: 0px 0px;
+	grid-template-areas: 'Title Icon';
+	grid-area: Header;
+	overflow: hidden;
+	padding-bottom: 5px;
+	border-bottom: 1px solid var(--white-color);
+	min-height: 6.5vh;
+}
+.Header h1 {
+	grid-area: Title;
+	font-size: 25px;
+	line-height: 25px;
+	display: flex;
+	align-items: center;
+}
+.Header img {
+	grid-area: Icon;
+	width: 100%;
+	max-height: 50px;
+	max-width: 50px;
+	margin: auto;
+}
+p .desc {
+	display: none;
+}
+p {
+	font-size: 1.3rem;
+}
+.Tmp .info, .Tmp .Header {
+	width: 66.6%;
+}
